@@ -55,18 +55,28 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 
 ### 4. Настройка Google Sheets API
-Создай проект в Google Cloud Console
-Включи Google Sheets API и Google Drive API
-Создай сервисный аккаунт и скачай credentials.json
-Поделись таблицей с email из credentials.json (права "Редактор")
-Положи credentials.json в корень проекта
+
+1. Создай проект в [Google Cloud Console](https://console.cloud.google.com/)
+
+2. Включи **Google Sheets API** и **Google Drive API**
+
+3. Создай сервисный аккаунт и скачай `credentials.json`
+
+4. Поделись таблицей с email из `credentials.json` (права "Редактор")
+
+5. Положи `credentials.json` в корень проекта
 
 ### 5. Настройка конфигурации
+
+Создай файл `.env` в корне проекта:
+
+```env
 BOT_TOKEN=твой_токен_бота_от_BotFather
 GOOGLE_SHEET_ID=ID_таблицы_из_URL
 CREDENTIALS_FILE=credentials.json
-SHEET_NAME=Название листа
+SHEET_NAME=название_листа
 TARGET_HASHTAGS=#отпуск,#выходной,#командировка
+```
 
 ### 6. Запуск бота
 python tg_bot.py
