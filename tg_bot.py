@@ -12,7 +12,7 @@ async def handle_channel_post(message):
     text = message.text
     if is_target_hashtag(text):
         formatted = format_post(text)
-        # print(f'Пост обработан: {formatted}')
+        print(f'Пост обработан: {formatted}')
         sheets_client.append_to_b1(formatted)
 
 async def run_bot():
